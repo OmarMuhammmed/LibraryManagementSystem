@@ -1,13 +1,42 @@
 # Library Management System
 
-A Library Management System built with Django. This project helps in managing books, members, and transactions in a library.
+إليك الميزات الرئيسية لمشروعك باللغة الإنجليزية:
 
-## Installation
+### Project Features for Library Management System:
 
-Follow these steps to get the project up and running on your local machine.
+1. **Book Management**:
+   - Add, update, and delete books in the library.
+   - Categorize books by different genres.
 
-### Clone the Repository
+2. **Member Management**:
+   - Add, update, and delete registered members.
+   - Track member information and contact details.
 
-```bash
-git clone https://github.com/OmarMuhammmed/LibraryManagementSystem.git
-cd LibraryManagementSystem
+3. **User Authentication**:
+   - Implement login and logout system to ensure application security.
+
+4. **User Interface**:
+   - Designed using Django templates for easy interaction with the system.
+
+5. **Database Integration**:
+   - Utilizes SQLite for effective and secure data management.
+
+### Installation:
+
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/OmarMuhammmed/LibraryManagementSystem.git
+   cd LibraryManagementSystem
+   ```
+
+2. Install the requirements:
+   ```sh
+   pip install -r requirements.txt
+   ```
+
+3. Run the application:
+   ```sh
+   python manage.py runserver
+   ```
+
+For more details, visit [Library Management System on GitHub](https://github.com/OmarMuhammmed/LibraryManagementSystem).
