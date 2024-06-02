@@ -8,17 +8,11 @@
    - Add, update, and delete books in the library.
    - Categorize books by different genres.
 
-2. **Member Management**:
-   - Add, update, and delete registered members.
-   - Track member information and contact details.
 
-3. **User Authentication**:
-   - Implement login and logout system to ensure application security.
-
-4. **User Interface**:
+1. **User Interface**:
    - Designed using Django templates for easy interaction with the system.
 
-5. **Database Integration**:
+3. **Database Integration**:
    - Utilizes SQLite for effective and secure data management.
 
 ### Installation:
