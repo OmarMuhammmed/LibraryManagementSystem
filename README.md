@@ -1,6 +1,6 @@
 # Library Management System
 
-إليك الميزات الرئيسية لمشروعك باللغة الإنجليزية:
+
 
 ### Project Features for Library Management System:
 
