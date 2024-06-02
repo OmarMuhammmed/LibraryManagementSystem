@@ -39,4 +39,4 @@
    python manage.py runserver
    ```
 
-For more details, visit [Library Management System on GitHub](https://github.com/OmarMuhammmed/LibraryManagementSystem).
+
