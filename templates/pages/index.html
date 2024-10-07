@@ -40,13 +40,8 @@
           {% if book.total_rental_price is not None and book.status == 'rental' %}
           <p class="totalprice">{{ book.total_rental_price }}</p>
           {% endif %} 
-          {% endfor %} {% comment %} الكتب المستعاره {% endcomment
-          %} {% for book in books %} {% if book.total_rental_price is not None
-          and book.status == 'rental' %}
-          <p class="totalrental">{{book.total_rental_price}}</p>
-          {% endif %} {% endfor %}
-          <p class="salaryrental"></p>
-          {% comment %} الكتب المباعه {% endcomment %} 
+          {% endfor %} 
+           
           {% for book in books %}
           {% if book.price is not None and book.status == 'soild' %}
           <p class="totalsoild">{{book.price}}</p>
