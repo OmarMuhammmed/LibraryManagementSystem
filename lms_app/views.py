@@ -6,27 +6,27 @@ from django.shortcuts import redirect
 
 
 def index(requset):
-  if requset.method == 'POST' :
-    add_book = AddBookForm(requset.POST,requset.FILES)
-    if add_book.is_valid() :
-      add_book.save()
-    
-    add_category = CategoryForm(requset.POST)
-    if add_category.is_valid() :
-      add_category.save()
+    if requset.method == 'POST' :
+        add_book = AddBookForm(requset.POST,requset.FILES)
+        if add_book.is_valid() :
+            add_book.save()
+            
+            add_category = CategoryForm(requset.POST)
+            if add_category.is_valid() :
+                add_category.save()
 
-  context = {
-      'books': Book.objects.all(),
-      'category': Category.objects.all(),
-      'form' : AddBookForm(),
-      'addcat' : CategoryForm(),
-      'allbooks':Book.objects.filter(active = True).count(),
-      'booksoild':Book.objects.filter(status = 'soild').count(),
-      'bookavailable':Book.objects.filter(status = 'available').count(),
-      'bookrental':Book.objects.filter(status = 'rental').count(),
-  }
-  
-  return render(requset, 'pages/index.html',context)
+    context = {
+        'books': Book.objects.all(),
+        'category': Category.objects.all(),
+        'form' : AddBookForm(),
+        'addcat' : CategoryForm(),
+        'allbooks':Book.objects.filter(active = True).count(),
+        'booksoild':Book.objects.filter(status = 'soild').count(),
+        'bookavailable':Book.objects.filter(status = 'available').count(),
+        'bookrental':Book.objects.filter(status = 'rental').count(),
+    }
+    
+    return render(requset, 'pages/index.html',context)
 
 def books(requset):
   # search 
@@ -70,13 +70,14 @@ def update(requset,id):
 
 def delete(requset,id):
 
-  book_delete = get_object_or_404(Book, id=id) # other way to get id 
-  if requset.method =="POST":
-    book_delete.delete()
-    return redirect('/')
+    book_delete = get_object_or_404(Book, id=id) 
+    
+    if requset.method =="POST":
+        book_delete.delete()
+        return redirect('/')
 
-  context={
-    'addcat' : CategoryForm(),
-  }
+    context={
+        'addcat' : CategoryForm(),
+    }
 
-  return render(requset,'pages/delete.html',context)
+    return render(requset,'pages/delete.html',context)
